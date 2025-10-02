@@ -16,11 +16,12 @@ int main(){
         LIS[i] = 1;
 
     //mencari nilai LIS
-    for (int i = 1; i < n; i++){
-        for (int j = 0; j < i; j++){
+    for (int i = 1; i < n; i++){ //mulai dari indeks 1 karena LIS yang berakhir di indeks 0 pasti 1
+        for (int j = 0; j < i; j++){ //cek semua indeks sebelum i
 
             //jika di array arr : angka sekarang lebih besar daripada angka pada posisi j
-            //dan di array LIS : LIS sekarang lebih kecil dari (LIS pada posisi j) + 1
+            //dan
+            //jika di array LIS : LIS sekarang lebih kecil dari (LIS pada posisi j) + 1
             if (arr[i] > arr[j] && LIS[i] < LIS[j] + 1){ 
                 LIS[i] = LIS[j] + 1;
             }
